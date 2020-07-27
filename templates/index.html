@@ -1,13 +1,40 @@
+
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Welcome!</title>
+        <title>Welcome</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body>
-        <h1>Hello world!</h1>
-        <p>We can build a full webpage here</p>
-        <form>
-            <input type="text" name="nickname" placeholder="Enter your nickname"/>
-            <input type="submit" value="Submit"/>
-        </form>
+        <div class="heading">
+            <span class="title1">Welcome to the world of Cooking </span>
+            <span class="title2">Anyone can find the perfect recipe </span>
+            <a href="/register">
+            <button class="register">
+                REGISTER NOW
+            </button>
+            </a>
+        </div>
+  <!-- navbar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Sign In</a>
+  <a href="#">Recipes</a>
+  <a href="#">About</a>
+</div>
+
+<span style="font-size:30px;color:white;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
     </body>
 </html>

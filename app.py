@@ -1,16 +1,35 @@
-# ---- YOUR APP STARTS HERE ----
-# -- Import section --
-from flask import Flask
-# from flask import render_template
-# from flask import request
 
+from flask import Flask, render_template
 
-# -- Initialization section --
 app = Flask(__name__)
 
-
-# -- Routes section --
 @app.route('/')
-@app.route('/index')
 def index():
-    return "hello world"
+	return render_template('index.html')
+
+app.run('0.0.0.0',8080)
+
+@app.route('/recipes', methods=['GET','POST'])
+def recipes():
+  if request.method == "GET":
+    return render_template('recipes.html')
+
+@app.route('/aboutus')
+def aboutus():
+  return "Whatever we say"
+
+@app.route('/shoppingcart')
+def shoppingcart():
+  return "Shopping Cart"
+
+@app.route('/downloadQuickCook')
+def download():
+  return "Download"
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+  if request.method == 'GET':
+    return render_template('register.html')
+  else:
+    print"eek"
+@app.route('/signin')
