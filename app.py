@@ -31,5 +31,5 @@ def register():
   if request.method == 'GET':
     return render_template('register.html')
   else:
-    print"eek"
+    print("eek")
 @app.route('/signin')
