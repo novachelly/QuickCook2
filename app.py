@@ -1,38 +1,44 @@
 
 from flask import Flask, render_template
-
+from flask import request
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-	return render_template('index.html')
+    return render_template('index.html')
 
 
-app.run('0.0.0.0',8080)
+app.run('0.0.0.0', 8080)
 
 
-@app.route('/recipes', methods=['GET','POST'])
+@app.route('/recipes', methods=['GET', 'POST'])
 def recipes():
-  if request.method == "GET":
-    return render_template('recipes.html')
+    if request.method == "GET":
+        return render_template('recipes.html')
+
 
 @app.route('/aboutus')
 def aboutus():
-  return "Whatever we say"
+    return "Whatever we say"
+
 
 @app.route('/shoppingcart')
 def shoppingcart():
-  return "Shopping Cart"
+    return "Shopping Cart"
+
 
 @app.route('/downloadQuickCook')
 def download():
-  return "Download"
+    return "Download"
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-  if request.method == 'GET':
-    return render_template('register.html')
-  else:
-    print("eek")
-@app.route('/signin')
+    if request.method == 'GET':
+        return render_template('register.html')
+    else:
+        print("eek")
+
+
+# @app.route('/signin')
