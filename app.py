@@ -2,7 +2,11 @@
 from flask import Flask, render_template
 from flask import request
 from datetime import datetime
+from model import getImageUrlFrom
+import os
+
 app = Flask(__name__)
+app.config['SPOON_KEY'] = os.getenv('SPOON_KEY')
 
 
 @app.route('/')
@@ -17,6 +21,15 @@ app.run('0.0.0.0', 8080)
 def recipes():
     if request.method == "GET":
         return render_template('recipes.html', time=datetime.now())
+
+
+@app.route('/recipes_results', methods=['GET', 'POST'])
+def recipes_results():
+    if request.method == 'POST':
+        query = request.form['recipes']
+        key = app.config['SPOON_KEY']
+        img_link = getImageUrlFrom(query, key)
+        return render_template('recipes_results.html', img_link = img_link, query = query)
 
 
 @app.route('/aboutus')

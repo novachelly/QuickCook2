@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
 <script>
 function showResult(str) {
@@ -27,4 +27,17 @@ function showResult(str) {
 </form>
 
 </body>
+</html> -->
+<html>
+    <head>
+        <title>Welcome!</title>
+        <link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
+    </head>
+    <body>
+        <h1>What is the recipe you desire?</h1>
+        <form method="post" action="/recipes_results">
+            <input type="text" name="recipes" placeholder="What is the recipe of your dream?"/>
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
 </html>
