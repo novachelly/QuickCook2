@@ -67,7 +67,7 @@ nav ul a{
 header h1 {
   font-family: "Raleway";
   text-transform: uppercase;
-  color:#fff;
+  color: #000;
   font-size:120px;
 }
 
@@ -151,9 +151,9 @@ section .image:hover {
     display:block;
     width:180px;
     height:50px;
-    border:3px solid white;
+    border:3px solid #0f141a;
     background-color:rgba(255,255,255,0);
-    color:white;
+    color: #000;
     font-family:sans-serif;
     font-weight: bold;
     border-radius: 5px;
@@ -162,7 +162,7 @@ section .image:hover {
 }
 .register:hover{
     background-color:rgba(255,255,255,1);
-    color:#222;
+    color: #929292;
     cursor:pointer;
     
     transition: background-color 1000ms, color 1000ms;
