@@ -1,12 +1,13 @@
 
 from flask import Flask, render_template
 from flask import request
+from datetime import datetime
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',time=datetime.now())
 
 
 app.run('0.0.0.0', 8080)

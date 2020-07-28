@@ -3,7 +3,9 @@
     margin:0;
     box-sizing: border-box;
 }
-
+body{
+    background-color:#fff;
+}
 p{
     line-height: 2;
 }
@@ -58,7 +60,6 @@ nav ul a{
   display: flex;
   align-items: center;
   justify-content: center;
-  background:url(img/header-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
