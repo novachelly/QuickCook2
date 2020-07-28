@@ -71,6 +71,9 @@ header h1 {
   font-size:120px;
 }
 
+.header1{
+    text-align:center;
+}
 section {
   height:400px;
   display: flex;
@@ -81,6 +84,8 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background:#0f141a;
+  color:#fff;
 }
 
 .section-follow .social-media {
@@ -113,10 +118,11 @@ i:hover {
   transform:scale(1.3);
 }
 
-section:nth-child(2n) {
+.section-alternating:nth-child(2n) {
   flex-direction: row-reverse;
   background:#0f141a;
   color:#fff;
+
 }
 
 section p {
