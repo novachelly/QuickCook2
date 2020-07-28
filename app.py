@@ -35,7 +35,7 @@ def download():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    if request.method == 'GET':
+    if request.method == 'POST':
         return render_template('register.html')
     else:
         print("eek")
@@ -44,4 +44,6 @@ def register():
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     if request.method == 'POST':
-        return render_template('signin.html')
+        return render_template('/signin.html')
+    else:
+        print("no")
