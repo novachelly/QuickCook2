@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html',time=datetime.now())
+    return render_template('index.html', time=datetime.now())
 
 
 app.run('0.0.0.0', 8080)
@@ -16,7 +16,7 @@ app.run('0.0.0.0', 8080)
 @app.route('/recipes', methods=['GET', 'POST'])
 def recipes():
     if request.method == "GET":
-        return render_template('recipes.html')
+        return render_template('recipes.html', time=datetime.now())
 
 
 @app.route('/aboutus')
@@ -37,7 +37,7 @@ def download():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'GET':
-        return render_template('register.html')
+        return render_template('register.html', time=datetime.now())
     else:
         print("eek")
 
