@@ -29,7 +29,7 @@ def recipes_results():
         query = request.form['recipes']
         key = app.config['SPOON_KEY']
         img_link = getImageUrlFrom(query, key)
-        return render_template('recipes_results.html', img_link = img_link, query = query)
+        return render_template('recipes_results.html', img_link=img_link, query=query)
 
 
 @app.route('/aboutus')
