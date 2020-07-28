@@ -24,11 +24,6 @@ def aboutus():
     return "Whatever we say"
 
 
-@app.route('/shoppingcart')
-def shoppingcart():
-    return "Shopping Cart"
-
-
 @app.route('/downloadQuickCook')
 def download():
     return "Download"
