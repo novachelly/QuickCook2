@@ -279,10 +279,8 @@ body h1 {
   color: #000;
   font-size:120px;
 }
+#reg {background-color:#D399E6;}
 
-body{
-    background-color: #525252;
-}
 .centered-form{
 	margin-top: 60px;
 }
@@ -290,8 +288,4 @@ body{
 .centered-form .panel{
 	background: rgba(255, 255, 255, 0.8);
 	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
-}
-
-panel-body{
-    background-color:rgba(211, 153, 230)
 }
