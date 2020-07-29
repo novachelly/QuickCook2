@@ -18,4 +18,4 @@ def getRecipeFromIngredients(ingredients, number, key):
     # recipe_link =
     print (recipe_info)
 
-getRecipeFromIngredients("tomato, cheese", "25")
+getRecipeFromIngredients("tomato, cheese", "25",)
