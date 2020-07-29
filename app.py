@@ -31,13 +31,19 @@ def recipes_results():
     if request.method == 'POST':
         query = request.form['recipes']
         key = app.config['SPOON_KEY']
-        img_link = getImageUrlFrom(query, key)
-        return render_template('recipes_results.html', time=datetime.now())
+        img_link = getRecipeFromIngredients(query, key)
+        return render_template('recipes_results.html', img_link = img_link, query = query)
+
+
+@app.route('/contactus')
+def contactus():
+    return render_template('contactus.html', time=datetime.now())
 
 
 @app.route('/aboutus')
 def aboutus():
     return render_template('aboutus.html', time=datetime.now())
+
 
 @app.route('/downloadQuickCook')
 def download():
