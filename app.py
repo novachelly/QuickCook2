@@ -2,12 +2,12 @@
 from flask import Flask, render_template
 from flask import request
 from datetime import datetime
-from model import getImageUrlFrom
+from model import getRecipeFromIngredients
 import os
 
 
 app = Flask(__name__)
-app.config['EDA_KEY'] = os.getenv('EDA_KEY')
+app.config['SPOON_KEY'] = os.getenv('SPOON_KEY')
 
 
 @app.route('/')
@@ -30,9 +30,9 @@ def recipes():
 def recipes_results():
     if request.method == 'POST':
         query = request.form['recipes']
-        key = app.config['EDA_KEY']
+        key = app.config['SPOON_KEY']
         img_link = getImageUrlFrom(query, key)
-        return render_template('recipes_results.html', time=datetime.now(), img_link=img_link, query=query)
+        return render_template('recipes_results.html', time=datetime.now())
 
 
 @app.route('/aboutus')
