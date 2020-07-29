@@ -7,7 +7,7 @@ import os
 
 
 app = Flask(__name__)
-app.config['SPOON_KEY'] = os.getenv('SPOON_KEY')
+app.config['EDA_KEY'] = os.getenv('EDA_KEY')
 
 
 @app.route('/')
@@ -30,9 +30,9 @@ def recipes():
 def recipes_results():
     if request.method == 'POST':
         query = request.form['recipes']
-        key = app.config['SPOON_KEY']
+        key = app.config['EDA_KEY']
         img_link = getImageUrlFrom(query, key)
-        return render_template('recipes_results.html', img_link=img_link, query=query)
+        return render_template('recipes_results.html', time=datetime.now(), img_link=img_link, query=query)
 
 
 @app.route('/aboutus')
