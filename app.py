@@ -59,3 +59,8 @@ def signin():
         return render_template('/signin.html')
     else:
         print("no")
+
+
+@app.route('/forgot_password')
+def forgot_password():
+    return render_template('/forgot_password.html')
