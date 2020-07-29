@@ -21,3 +21,9 @@ def getRecipeFromIngredients(ingredients, number, key):
     excludeIngredients = excludeIngredients
     intolerances = intolerances
     instructionsRequired = instructionsRequired
+    # recipe_name =
+    # recipe_img =
+    # recipe_link =
+    print (recipe_info)
+
+getRecipeFromIngredients("tomato, cheese", "25")
