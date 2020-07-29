@@ -1,4 +1,3 @@
-from model import getImageUrlFrom
 import requests
 
 
