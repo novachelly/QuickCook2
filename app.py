@@ -3,24 +3,33 @@ from flask import Flask, render_template
 from flask import request
 from datetime import datetime
 # from model import getImageUrlFrom
-# import os
+import os
+
 
 app = Flask(__name__)
 # app.config['SPOON_KEY'] = os.getenv('SPOON_KEY')
 
 
 @app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html', time=datetime.now())
 
 
-app.run('0.0.0.0', 8080)
+if __name__ == "__main__":
+    app.run('0.0.0.0', 8080)
+
 
 
 # @app.route('/recipes', methods=['GET', 'POST'])
 # def recipes():
 #     if request.method == "GET":
 #         return render_template('recipes.html', time=datetime.now())
+
+@app.route('/recipes')
+def recipes():
+    return render_template('recipes.html', time=datetime.now())
+
 
 
 # @app.route('/recipes_results', methods=['GET', 'POST'])
