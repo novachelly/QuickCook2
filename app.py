@@ -37,8 +37,7 @@ def recipes_results():
 
 @app.route('/aboutus')
 def aboutus():
-    return "Whatever we say"
-
+    return render_template('aboutus.html', time=datetime.now())
 
 @app.route('/downloadQuickCook')
 def download():
@@ -64,3 +63,8 @@ def signin():
 @app.route('/forgot_password')
 def forgot_password():
     return render_template('/forgot_password.html')
+
+
+@app.route('/forgot_username')
+def forgot_username():
+    return render_template('/forgot_username.html')
