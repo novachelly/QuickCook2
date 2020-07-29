@@ -29,11 +29,13 @@ def recipes():
 @app.route('/recipes_results', methods=['GET', 'POST'])
 def recipes_results():
     if request.method == 'POST':
-        query = request.form['recipes']
+        query = request.form['ingredients']
         key = app.config['SPOON_KEY']
-        img_link = getRecipeFromIngredients(query, key)
-        return render_template('recipes_results.html', img_link = img_link, query = query)
-
+        number = request.form['number']
+        recipes = getRecipeFromIngredients(query, number, key)
+        # return render_template('recipes_results.html', img_link = img_link, query = query)
+        print (recipes)
+        return "this works"
 
 @app.route('/contactus')
 def contactus():

@@ -36,13 +36,11 @@ function showResult(str) {
     <body>
         <h1>What is the recipe you desire?</h1>
         <form method="post" action="/recipes_results">
-            <input type="text" name="recipes" placeholder="What is the recipe of your dream?"/>
-        <form method="post" action="/recipes_results">
-            <input type="text" name="recipes" placeholder="Are you on a diet?"/>
-        <form method="post" action="/recipes_results">
-            <input type="text" name="recipes" placeholder="What do you want to exclude from these recipes?"/>
-        <form method="post" action="/recipes_results">
-            <input type="text" name="recipes" placeholder="Any intolerances?"/>
+            <input type="text" name="ingredients" placeholder="What ingredients would you like to use?"/>
+            <input type="text" name="diet" placeholder="Are you on a diet?"/>
+            <input type="text" name="exclude" placeholder="What do you want to exclude from these recipes?"/>
+            <input type="text" name="intolerances" placeholder="Any intolerances?"/>
+            <input type="text" name="number" placeholder="How many recipes do you want?"/>
             <input type="submit" value="Submit"/>
         </form>
     </body>

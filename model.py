@@ -10,20 +10,26 @@ import requests
 #     return img_url
 
 def getRecipeFromIngredients(ingredients, number, key):
+    print (ingredients)
+    print (number)
+    print (key)
     search_url = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + key + "&ingredients=" + ingredients + "&number=" + number
     data = requests.get(search_url)
     recipe_info = data.json()
-    recipe_name = recipe_info['data'][0]['name']['original']['url']
-    recipe_img =
-    recipe_link =
-    cuisine = cuisine
-    diet = diet
-    excludeIngredients = excludeIngredients
-    intolerances = intolerances
-    instructionsRequired = instructionsRequired
-    # recipe_name =
+    # recipe_name = recipe_info['data'][0]['name']['original']['url']
     # recipe_img =
     # recipe_link =
-    print (recipe_info)
+    # cuisine = cuisine
+    # diet = diet
+    # excludeIngredients = excludeIngredients
+    # intolerances = intolerances
+    # instructionsRequired = instructionsRequired
+    # recipe_name =
+    recipe = {'title':recipe_info[0]['title'], 
+            'img':recipe_info[0]['image'],
+            'aisle': recipe_info[0]['missedIngredients'][0]}
+    return recipe
 
-getRecipeFromIngredients("tomato, cheese", "25")
+
+
+# getRecipeFromIngredients("tomato, cheese", "25")
