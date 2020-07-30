@@ -168,7 +168,7 @@ section .image:hover {
 }
 .register:hover{
     background-color:rgba(255,255,255,1);
-    color: #929292;
+    color: #C8A2C8;
     cursor:pointer;
     
     transition: background-color 1000ms, color 1000ms;
