@@ -22,10 +22,8 @@ def getRecipeFromIngredients(ingredients, number, key):
     # intolerances = intolerances
     # instructionsRequired = instructionsRequired
     # recipe_name =
+    missedIngredients = recipe_info[0]['missedIngredients']
     recipe = {'title': recipe_info[0]['title'],
-              'img': recipe_info[0]['image']}
+              'img': recipe_info[0]['image'],
+              'missedIngredients': missedIngredients}
     return recipe
-
-
-
-# getRecipeFromIngredients("tomato, cheese", "25")

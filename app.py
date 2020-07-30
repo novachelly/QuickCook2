@@ -32,8 +32,7 @@ def recipes_results():
         key = app.config['SPOON_KEY']
         number = request.form['number']
         recipes = getRecipeFromIngredients(query, number, key)
-        missedIngredients = [recipes(0)]
-        return render_template('recipes_results.html', query=query, number=number, recipes=recipes, missedIngredients=missedIngredients)
+        return render_template('recipes_results.html', query=query, number=number, recipes=recipes)
 
 
 @app.route('/contactus')
