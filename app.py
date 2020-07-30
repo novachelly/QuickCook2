@@ -25,17 +25,17 @@ def recipes():
     return render_template('recipes.html', time=datetime.now())
 
 
-
 @app.route('/recipes_results', methods=['GET', 'POST'])
 def recipes_results():
     if request.method == 'POST':
         query = request.form['ingredients']
         key = app.config['SPOON_KEY']
         number = request.form['number']
+        ingredients = getRecipeFromIngredients()
+        # missedIngredients = [ingredients]-request.form['ingredients']
         recipes = getRecipeFromIngredients(query, number, key)
-        # return render_template('recipes_results.html', img_link = img_link, query = query)
-        print (recipes)
-        return "this works"
+        return render_template('recipes_results.html', query=query, number=number, recipes=recipes)
+
 
 @app.route('/contactus')
 def contactus():

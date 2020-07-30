@@ -5,7 +5,7 @@
     </head>
     <body>
         <h1>Recipes that match your desires</h1>
-        <h3>You requested a recipe of {{query}}</h3>
-        <img src = {{img_link}}>
+        <h3>You requested {{number}} recipes with the following ingredients: {{query}}</h3>
+        <h3>Here are {{number}} recipes and the ingredients you will need: {{recipes.img}}{{recipes.title}}{{recipes.missedIngredients.aisle.amount}}{{recipes.missedIngredients.aisle.unitLong}}</h3>
     </body>
 </html>
