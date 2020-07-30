@@ -9,7 +9,7 @@ import requests
 #     print (img_url)
 #     return img_url
 
-def getRecipeFromIngredients(ingredients, number, key, missedIngredients):
+def getRecipeFromIngredients(ingredients, number, key):
     search_url = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + key + "&ingredients=" + ingredients + "&number=" + number
     data = requests.get(search_url)
     recipe_info = data.json()
