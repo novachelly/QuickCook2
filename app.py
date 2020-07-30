@@ -31,8 +31,6 @@ def recipes_results():
         query = request.form['ingredients']
         key = app.config['SPOON_KEY']
         number = request.form['number']
-        ingredients = getRecipeFromIngredients()
-        # missedIngredients = [ingredients]-request.form['ingredients']
         recipes = getRecipeFromIngredients(query, number, key)
         return render_template('recipes_results.html', query=query, number=number, recipes=recipes)
 

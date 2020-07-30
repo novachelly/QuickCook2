@@ -1,11 +1,12 @@
 <html>
     <head>
-        <title>Recipes that Match Your Desires</title>
+        <title>Recipes that Match Your Fridge</title>
         <link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
     </head>
     <body>
-        <h1>Recipes that match your desires</h1>
+        <h2>Recipes that match your fridge</h2>
         <h3>You requested {{number}} recipes with the following ingredients: {{query}}</h3>
-        <h3>Here are {{number}} recipes and the ingredients you will need: {{recipes.img}}{{recipes.title}}{{recipes.missedIngredients.aisle.amount}}{{recipes.missedIngredients.aisle.unitLong}}</h3>
+        <h3>{{recipes.img}}</h3>
+        <h3>Here is the first recipe you can make: {{recipes.title}}</h3>
     </body>
 </html>
