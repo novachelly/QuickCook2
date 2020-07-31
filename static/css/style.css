@@ -3,9 +3,6 @@
     margin:0;
     box-sizing: border-box;
 }
-header{
-background-color:#D399E6
-}
 
 p{
     line-height: 2;
@@ -64,6 +61,10 @@ header h1 {
 
 .header1{
     text-align:center;
+    height: 400px;
+    background-image: url('/static/images/tikkamasala.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 section {
   height:400px;
