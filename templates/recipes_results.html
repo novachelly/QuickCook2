@@ -7,15 +7,13 @@
         <h2>Recipes that match your fridge</h2>
         <h3>You requested {{number}} recipes with the following ingredients: {{query}}</h3>
         <img src= {{recipes.img}}>
-        <h3>Here is the first recipe you can make: </h3>
-        {%for title in recipes:%}
-            <p>{{recipes.title}}</p>
-        {%endfor%}
+        <h3>Here is the first recipe you requested: </h3>
+            <p>{{recipes.title}}
         <h4>You need these ingredients: </h4>
         {%for ingredient in recipes.missedIngredients:%}
             <p>{{ingredient.name}} - {{ingredient.amount}} {{ingredient.unitLong}}</p>
         {%endfor%}
-        <h3>Here is the second recipe you can make: {{recipes.title}}</h3>
+        <h3>Here is the second recipe you can make: {{recipes1.title}}</h3>
 
     </body>
 </html>

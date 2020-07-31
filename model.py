@@ -27,3 +27,14 @@ def getRecipeFromIngredients(ingredients, number, key):
               'img': recipe_info[0]['image'],
               'missedIngredients': missedIngredients}
     return recipe
+
+
+def getRecipeFromIngredients1(ingredients, number, key):
+    search_url = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + key + "&ingredients=" + ingredients + "&number=" + number
+    data = requests.get(search_url)
+    recipe_info = data.json()
+    missedIngredients1 = recipe_info[1]['missedIngredients']
+    recipe1 = {'title': recipe_info[1]['title'],
+               'img': recipe_info[1]['image'],
+               'missedIngredients': missedIngredients1}
+    return recipe1
