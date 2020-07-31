@@ -4,16 +4,33 @@
         <link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
     </head>
     <body>
-        <h2>Recipes that match your fridge</h2>
-        <h3>You requested {{number}} recipes with the following ingredients: {{query}}</h3>
-        <img src= {{recipes.img}}>
-        <h3>Here is the first recipe you requested: </h3>
-            <p>{{recipes.title}}
-        <h4>You need these ingredients: </h4>
-        {%for ingredient in recipes.missedIngredients:%}
-            <p>{{ingredient.name}} - {{ingredient.amount}} {{ingredient.unitLong}}</p>
-        {%endfor%}
-        <h3>Here is the second recipe you can make: {{recipes1.title}}</h3>
-
+        <h2>Your Recipe Match</h2>
+        <img src={{recipe_info.image}}>
+        <h3>{{recipe_info.title}}</h3>
+        <a href={{recipe_info.sourceUrl}}>See the Recipe</a>
+        <h2>Your Recipe Match</h2>
+        <img src={{recipe_info1.image}}>
+        <h3>{{recipe_info1.title}}</h3>
+        <a href={{recipe_info1.sourceUrl}}>See the Recipe</a>
+        <h2>Your Recipe Match</h2>
+        <img src={{recipe_info1.image}}>
+        <h3>{{recipe_info2.title}}</h3>
+        <a href={{recipe_info1.sourceUrl}}>See the Recipe</a>
+        <h2>Your Recipe Match</h2>
+        <img src={{recipe_info1.image}}>
+        <h3>{{recipe_info3.title}}</h3>
+        <a href={{recipe_info1.sourceUrl}}>See the Recipe</a>
+        <h2>Your Recipe Match</h2>
+        <img src={{recipe_info1.image}}>
+        <h3>{{recipe_info4.title}}</h3>
+        <a href={{recipe_info1.sourceUrl}}>See the Recipe</a>
+        <h2>Your Recipe Match</h2>
+        <img src={{recipe_info1.image}}>
+        <h3>{{recipe_info5.title}}</h3>
+        <a href={{recipe_info1.sourceUrl}}>See the Recipe</a>
+        <h2>Your Recipe Match</h2>
+        <img src={{recipe_info1.image}}>
+        <h3>{{recipe_info6.title}}</h3>
+        <a href={{recipe_info1.sourceUrl}}>See the Recipe</a>
     </body>
 </html>
