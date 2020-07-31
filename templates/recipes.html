@@ -29,19 +29,24 @@ function showResult(str) {
 </body>
 </html> -->
 <html>
-    <head>
-        <title>Welcome!</title>
-        <link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
-    </head>
-    <body>
-        <h1>What is the recipe you desire?</h1>
-        <form method="post" action="/recipes_results">
-            <input type="text" name="ingredients" placeholder="What ingredients would you like to use?"/>
-            <input type="text" name="diet" placeholder="Are you on a diet?"/>
-            <input type="text" name="exclude" placeholder="What do you want to exclude from these recipes?"/>
-            <input type="text" name="intolerances" placeholder="Any intolerances?"/>
-            <input type="text" name="number" placeholder="How many recipes do you want?"/>
-            <input type="submit" value="Submit"/>
+
+<head>
+	<title>Welcome!</title>
+	<link rel="stylesheet" type="text/css" href="static/css/style5.css?q={{ time }}" />
+</head>
+
+<body>
+
+    
+	<h1>What is the recipe you desire?</h1>
+	<form method="post" action="/recipes_results">
+		<input type="text" name="ingredients" placeholder="What ingredients would you like to use?"/>
+		<input type="text" name="diet" placeholder="Are you on a diet?"/>
+		<input type="text" name="exclude" placeholder="What do you want to exclude from these recipes?"/>
+		<input type="text" name="intolerances" placeholder="Any intolerances?"/>
+		<input type="text" name="number" placeholder="How many recipes do you want?"/>
+		<input type="submit" value="Submit"/>
         </form>
-    </body>
+</body>
+
 </html>
