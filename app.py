@@ -26,19 +26,6 @@ def recipes():
     return render_template('recipes.html', time=datetime.now())
 
 
-# @app.route('/recipes_results', methods=['GET', 'POST'])
-# def recipes_results():
-#     if request.method == 'POST':
-#         query = request.form['ingredients']
-#         key = app.config['SPOON_KEY']
-#         number = request.form['number']
-#         # recipe_ids = getRecipeFromIngredients(query, number, key)
-#         recipe_id = getRecipeFromIngredients(query, number, key)
-#         recipe_info = getRecipeInfo(recipe_id, key)
-#         # recipes = getRecipeFromIngredients(query, number, key)
-#         # for
-#         # recipes1 = getRecipeFromIngredients1(query, number, key)
-#         return render_template('recipes_results.html', query=query, number=number, recipe_id=recipe_id, recipe_info=recipe_info)
 @app.route('/recipes_results', methods=['GET', 'POST'])
 def recipes_results():
     if request.method == 'POST':
@@ -53,7 +40,6 @@ def recipes_results():
             data = requests.get(search_url)
             recipe_info = data.json()  # returning a list of dictionaries 
             # recipe_id = recipe_info[count]["id"]
-            # ...maybe you get more list items...
             # recipe_search_url = "https://api.spoonacular.com/recipes/" + str(recipe_id) + "/information?apiKey=" + key
             # data = requests.get(search_url)
             # recipe_info_new = data.json()
