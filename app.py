@@ -133,3 +133,8 @@ def forgot_username():
 #         {%for ingredient in recipes.missedIngredients:%}
 #         {%endfor%}
 #          -->
+
+
+@app.route('/donate')
+def donate():
+    return render_template('/donate.html')
