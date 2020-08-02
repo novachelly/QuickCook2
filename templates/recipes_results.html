@@ -5,5 +5,26 @@
     </head>
     <body>
         <h1>{{recipe_list}}</h1>
+    </b<html>
+    <head>
+        <title>Recipes that Match Your Fridge</title>
+        <link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
+    </head>
+    <body>
+        <script src="main.js"></script>
+        <h2>Your Recipe Match!</h2>
+        <img src={{recipe_info.image}}>
+        <h3>{{recipe_info.title}}</h3>
+        <a href={{recipe_info.sourceUrl}}>See the Recipe</a>
+        {%for i in missedIngredients:%}
+            <p>{{i.name}} - {{i.amount}} {{i.unit}}</p>
+        {%endfor%}        
+        <img src={{recipe_info1.image}}>
+        <h3>{{recipe_info1.title}}</h3>
+        <a href={{recipe_info1.sourceUrl}}>See the Recipe</a>
+        <img src={{recipe_info2.image}}>
+        <h3>{{recipe_info2.title}}</h3>
+        <a href={{recipe_info2.sourceUrl}}>See the Recipe</a>
     </body>
+</html>ody>
 </html>
