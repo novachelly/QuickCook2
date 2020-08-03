@@ -31,7 +31,7 @@ def recipes_results():
         # number_ask = 10
         query = request.form['ingredients']
         key = app.config['SPOON_KEY']
-        search_url = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + key + "&ingredients=" + query + "&number=10" # + number
+        search_url = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + key + "&ingredients=" + query + "&number=" + number
 
         def getRecipeFromIngredients(query, number, key):
             data = requests.get(search_url)
@@ -143,16 +143,6 @@ def recipes_results():
             recipe_info9 = data.json()
             return recipe_info9
 
-        def getRecipeFromIngredients10(query, number, key):
-            data = requests.get(search_url)
-            recipe_info10 = data.json()
-            return recipe_info[10]["id"]
-
-        def getRecipeInfo10(id_number, key):
-            search_url_recipe = "https://api.spoonacular.com/recipes/" + str(id_number) + "/information?apiKey=" + key
-            data = requests.get(search_url_recipe)
-            recipe_info10 = data.json()
-            return recipe_info10
         # def getMissedIngredients(query, number, key):
         #     data = requests.get(search_url)
         #     recipe_info = data.json()
@@ -180,13 +170,11 @@ def recipes_results():
         recipe_info8 = getRecipeInfo8(recipe_id8, key)
         recipe_id9 = getRecipeFromIngredients9(query, number, key)
         recipe_info9 = getRecipeInfo9(recipe_id9, key)
-        recipe_id10 = getRecipeFromIngredients10(query, number, key)
-        recipe_info10 = getRecipeInfo10(recipe_id10, key)
-        return render_template('recipes_results.html', query=query, recipe_info=recipe_info, recipe_info1=recipe_info1, recipe_info2=recipe_info2, recipe_info3=recipe_info3, recipe_info4=recipe_info4, recipe_info5=recipe_info5, recipe_info6=recipe_info6, recipe_info7=recipe_info7, recipe_info8=recipe_info8, recipe_info9=recipe_info9, recipe_info10=recipe_info10, time=datetime.now())
+        return render_template('recipes_results.html', query=query, recipe_info=recipe_info, recipe_info1=recipe_info1, recipe_info2=recipe_info2, recipe_info3=recipe_info3, recipe_info4=recipe_info4, recipe_info5=recipe_info5, recipe_info6=recipe_info6, recipe_info7=recipe_info7, recipe_info8=recipe_info8, recipe_info9=recipe_info9, time=datetime.now())
     else:
         return "no"
         # missedIngredients = getMissedIngredients(query, number, key)
-        #For if the consumer wants to decide how many recipes they want
+        # For if the consumer wants to decide how many recipes they want
         # if int(number) == 1:
     #         return render_template('recipes_results.html', query=query, number, recipe_info=recipe_info, time=datetime.now())
     #     else:
