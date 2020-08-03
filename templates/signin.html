@@ -3,57 +3,59 @@
 <head>
 	<title>Sign-In!</title>
 	<link rel="stylesheet" href="static/css/style5.css?q={{time}}" type=text/css <div class="contact-section">
-    <form action="/signin">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/signin">Sign-In</a></li>
-                <li><a href="/aboutus">About</a></li>
-                <li><a href="/contactus">Contact Us</a></li>
-                <li><a href="/recipes">Try it Out</a><li>
-                <li><a href="/donate">Donate</a><li>
-            </ul>
-        </nav>
+	<form action="/signin">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+			id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/register">Register</a></li>
+				<li><a href="/signin">Sign-In</a></li>
+				<li><a href="/aboutus">About</a></li>
+				<li><a href="/contactus">Contact Us</a></li>
+				<li><a href="/recipes">Try it Out</a>
+				<li>
+				<li><a href="/donate">Donate</a>
+				<li>
+			</ul>
+		</nav>
 
-        <div class="menu-btn">
-            +
-        </div>
+		<div class="menu-btn">
+			+
+		</div>
 
 </head>
 
-<body id="reg">
-    
+<body>
 
-<form>
-    <label>
-        <p class="label-txt">ENTER YOUR USERNAME</p>
-        <input type="text" class="input">
-        <div class="line-box">
-        <div class="line"></div>
-        </div>
-    </label>
-    <label>
-        <p class="label-txt">ENTER YOUR PASSWORD</p>
-        <input type="text" class="input">
-        <div class="line-box">
-        <div class="line"></div>
-        </div>
-    </label>
-    <div>
-    <button type="submit">Submit</button>
-    </div>
-    <div>
-        <a href="/forgot_password">Forgot Your Password?</a>
-    </div>
-    <div>
-        <a href="/forgot_username">Forgot Your Username?</a>
-    </div>
-</form>
-
+	<div class="sidenav">
+		<div class="login-main-text">
+			<h2>Application<br> Login Page</h2>
+				<p>Login or register from here to access the launch portal.</p>
+		</div>
+	</div>
+	<div class="main">
+		<div class="col-md-6 col-sm-12">
+			<div class="login-form">
+				<form>
+					<div class="form-group">
+						<label>User Name</label>
+						<input type="text" class="form-control" placeholder="User Name">
+                  </div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control" placeholder="Password">
+                  </div>
+							<button type="submit" class="btn btn-black">Login</button>
+							<a href="/register"> <button type="submit" class="btn btn-secondary">Register
+                                </button>
+							</a>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
