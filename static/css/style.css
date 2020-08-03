@@ -28,6 +28,7 @@ nav.scrolled{
 
 nav.scrolled + .logo img{
     height:60px;
+
 }
 
 nav ul{
@@ -39,7 +40,7 @@ nav ul{
 nav ul a{
     text-decoration: none;
     color:#ffffff;
-    margin:0 32px;
+    margin:0 40px;
     font-size:14px;
     text-transform: uppercase;
 
