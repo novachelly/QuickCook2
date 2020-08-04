@@ -2,30 +2,6 @@
     <head>
         <title>Recipes that Match Your Fridge</title>
 	    <link rel="stylesheet" href="static/css/style5.css?q={{time}}" type=text/css <div class="contact-section">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/register">Register</a></li>
-                    <li><a href="/signin">Sign-In</a></li>
-                    <li><a href="/aboutus">About</a></li>
-                    <li><a href="/contactus">Contact Us</a></li>
-                    <li><a href="/recipes">Try it Out</a><li>
-                    <li><a href="/donate">Donate</a><li>
-
-                </ul>
-            </nav>
-
-            <div class="menu-btn">
-                +
-            </div>
-
-    </head>
-    <body>
-<html>
-    <head>
-        <title>Recipes that Match Your Fridge</title>
-	    <link rel="stylesheet" href="static/css/style5.css?q={{time}}" type=text/css <div class="contact-section">
     </head>
     <body>
         <div class="container">
@@ -36,14 +12,13 @@
                     <li><a href="/signin">Sign-In</a></li>
                     <li><a href="/aboutus">About</a></li>
                     <li><a href="/contactus">Contact Us</a></li>
-                    <li><a href="/recipes">Try it Out</a><li>
                     <li><a href="/donate">Donate</a><li>
                 </ul>
             </nav>
             <div class="menu-btn">
                 +
             </div>
-        <h2>Your Ten Recipe Matches!</h2>
+        <h2>Your Recipe Matches Are Here!</h2>
         {% for recipe in recipes: %}
         <div class="image">
             <img src={{recipe.image}}>
