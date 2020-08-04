@@ -1,35 +1,30 @@
 <html>
-
-<head>
-	<title>Recipes that Match Your Fridge</title>
-	<link rel="stylesheet" href="static/css/style5.css?q={{time}}" type=text/css <div class="contact-section">
-
-</head>
-
-<body>
-	<div class="container">
-		<nav>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/register">Register</a></li>
-				<li><a href="/signin">Sign-In</a></li>
-				<li><a href="/aboutus">About</a></li>
-				<li><a href="/contactus">Contact Us</a></li>
-				<li><a href="/donate">Donate</a>
-				<li>
-			</ul>
-		</nav>
-		<div class="menu-btn">
-			+
-		</div>
-		<h2>Your Recipe Matches Are Here!</h2>
-		{% for recipe in recipes: %}
-		<div class="image">
-			<img src={{recipe.image}}>
-			<h3>{{recipe.title}}</h3>
-			<a href={{recipe.sourceUrl}}>See the Recipe</a>
-		</div>
-		{%endfor%}
+    <head>
+        <title>Recipes that Match Your Fridge</title>
+	    <link rel="stylesheet" href="static/css/style5.css?q={{time}}" type=text/css <div class="contact-section">
+    </head>
+    <body>
+        <!-- <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/aboutus">About</a></li>
+                    <li><a href="/contactus">Contact Us</a></li>
+                    <li><a href="/">Sign Out</a></li>
+                    <li><a href="/donate">Donate</a><li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                +
+            </div> -->
+        <h2>Your Recipe Matches Are Here!</h2>
+        {% for recipe in recipes: %}
+        <div class="image">
+            <img src={{recipe.image}}>
+            <h3>{{recipe.title}}</h3>
+            <a href={{recipe.sourceUrl}}>See the Recipe</a>
+        </div>
+        {%endfor%}
 		<!-- {%for i in missedIngredients:%}
             <p>{{i.name}} - {{i.amount}} {{i.unit}}</p>
         {%endfor%}         -->
