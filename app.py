@@ -34,28 +34,12 @@ def recipes_results():
         key = app.config['SPOON_KEY']
         search_url = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + \
             key + "&ingredients=" + query + "&number=" + number
-
-        recipe_id = getRecipeFromIngredients(query, number, key, search_url, 0)
-        recipe_info = getRecipeInfo(recipe_id, key)
-        recipe_id1 = getRecipeFromIngredients(query, number, key, search_url, 1)
-        recipe_info1 = getRecipeInfo(recipe_id1, key)
-        recipe_id2 = getRecipeFromIngredients(query, number, key, search_url, 2)
-        recipe_info2 = getRecipeInfo(recipe_id2, key)
-        recipe_id3 = getRecipeFromIngredients(query, number, key, search_url, 3)
-        recipe_info3 = getRecipeInfo(recipe_id3, key)
-        recipe_id4 = getRecipeFromIngredients(query, number, key, search_url, 4)
-        recipe_info4 = getRecipeInfo(recipe_id4, key)
-        recipe_id5 = getRecipeFromIngredients(query, number, key, search_url, 5)
-        recipe_info5 = getRecipeInfo(recipe_id5, key)
-        recipe_id6 = getRecipeFromIngredients(query, number, key, search_url, 6)
-        recipe_info6 = getRecipeInfo(recipe_id6, key)
-        recipe_id7 = getRecipeFromIngredients(query, number, key, search_url, 7)
-        recipe_info7 = getRecipeInfo(recipe_id7, key)
-        recipe_id8 = getRecipeFromIngredients(query, number, key, search_url, 8)
-        recipe_info8 = getRecipeInfo(recipe_id8, key)
-        recipe_id9 = getRecipeFromIngredients(query, number, key, search_url, 9)
-        recipe_info9 = getRecipeInfo(recipe_id9, key)
-        return render_template('recipes_results.html', query=query, recipe_info=recipe_info, recipe_info1=recipe_info1, recipe_info2=recipe_info2, recipe_info3=recipe_info3, recipe_info4=recipe_info4, recipe_info5=recipe_info5, recipe_info6=recipe_info6, recipe_info7=recipe_info7, recipe_info8=recipe_info8, recipe_info9=recipe_info9, time=datetime.now())
+        recipes = []
+        for x in range(0, int(number)):
+            recipe_id = getRecipeFromIngredients(query, number, key, search_url, x)
+            recipe_info = getRecipeInfo(recipe_id, key)
+            recipes.append(recipe_info)
+        return render_template('recipes_results.html', query=query, recipes=recipes, time=datetime.now())
     else:
         return "no"
 
@@ -104,3 +88,7 @@ def forgot_username():
 @app.route('/donate')
 def donate():
     return render_template('/donate.html')
+
+@app.route('/signin_results')
+def signin_results():
+    return render_template('/signin_results.html')

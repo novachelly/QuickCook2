@@ -22,76 +22,37 @@
 
     </head>
     <body>
-        <h1>{{recipe_list}}</h1>
-    </b<html>
+<html>
     <head>
         <title>Recipes that Match Your Fridge</title>
-        <link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
+	    <link rel="stylesheet" href="static/css/style5.css?q={{time}}" type=text/css <div class="contact-section">
     </head>
     <body>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/signin">Sign-In</a></li>
+                    <li><a href="/aboutus">About</a></li>
+                    <li><a href="/contactus">Contact Us</a></li>
+                    <li><a href="/recipes">Try it Out</a><li>
+                    <li><a href="/donate">Donate</a><li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                +
+            </div>
         <h2>Your Ten Recipe Matches!</h2>
+        {% for recipe in recipes: %}
         <div class="image">
-            <img src={{recipe_info.image}}>
-            <h3>{{recipe_info.title}}</h3>
-            <a href={{recipe_info.sourceUrl}}>See the Recipe</a>
+            <img src={{recipe.image}}>
+            <h3>{{recipe.title}}</h3>
+            <a href={{recipe.sourceUrl}}>See the Recipe</a>
         </div>
+        {%endfor%}
         <!-- {%for i in missedIngredients:%}
             <p>{{i.name}} - {{i.amount}} {{i.unit}}</p>
         {%endfor%}         -->
-        <br>
-        <div class="image">
-        <img src={{recipe_info1.image}}>
-        <h3>{{recipe_info1.title}}</h3>
-        <a href={{recipe_info1.sourceUrl}}>See the Recipe</a>
-        </div>
-        <br>
-        <div class="image">
-        <img src={{recipe_info2.image}}>
-        <h3>{{recipe_info2.title}}</h3>
-        <a href={{recipe_info2.sourceUrl}}>See the Recipe</a>
-        </div>
-        <br>
-        <div class="image">
-        <img src={{recipe_info3.image}}>
-        <h3>{{recipe_info3.title}}</h3>
-        <a href={{recipe_info3.sourceUrl}}>See the Recipe</a>
-        </div>
-        <br>
-        <div class="image">
-        <img src={{recipe_info4.image}}>
-        <h3>{{recipe_info4.title}}</h3>
-        <a href={{recipe_info4.sourceUrl}}>See the Recipe</a>
-        </div>
-        <br>
-        <div class="image">
-        <img src={{recipe_info5.image}}>
-        <h3>{{recipe_info5.title}}</h3>
-        <a href={{recipe_info5.sourceUrl}}>See the Recipe</a>
-        </div>
-        <br>
-        <div class="image">
-        <img src={{recipe_info6.image}}>
-        <h3>{{recipe_info6.title}}</h3>
-        <a href={{recipe_info6.sourceUrl}}>See the Recipe</a>
-        </div>
-        <br>
-        <div class="image">
-        <img src={{recipe_info7.image}}>
-        <h3>{{recipe_info7.title}}</h3>
-        <a href={{recipe_info7.sourceUrl}}>See the Recipe</a>
-        </div>
-        <br>
-        <div class="image">
-        <img src={{recipe_info8.image}}>
-        <h3>{{recipe_info8.title}}</h3>
-        <a href={{recipe_info8.sourceUrl}}>See the Recipe</a>
-        </div>
-        <br>
-        <div class="image">
-        <img src={{recipe_info9.image}}>
-        <h3>{{recipe_info9.title}}</h3>
-        <a href={{recipe_info9.sourceUrl}}>See the Recipe</a>
-        </div>
     </body>
-</html>ody>
 </html>
