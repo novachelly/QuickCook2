@@ -70,25 +70,36 @@ def register():
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     if request.method == 'GET':
-        return render_template('/signin.html')
+        return render_template('/signin.html', time=datetime.now())
     else:
         print("no")
 
 
 @app.route('/forgot_password')
 def forgot_password():
-    return render_template('/forgot_password.html')
+    return render_template('/forgot_password.html', time=datetime.now())
 
 
 @app.route('/forgot_username')
 def forgot_username():
-    return render_template('/forgot_username.html')
+    return render_template('/forgot_username.html', time=datetime.now())
 
 
 @app.route('/donate')
 def donate():
-    return render_template('/donate.html')
+    return render_template('/donate.html', time=datetime.now())
+
 
 @app.route('/signin_results')
 def signin_results():
-    return render_template('/signin_results.html')
+    return render_template('/signin_results.html', time=datetime.now())
+
+
+@app.route('/register_results')
+def register_results():
+    return render_template('register_results.html', time=datetime.now())
+
+
+@app.route('/donate_results')
+def donate_results():
+    return render_template('donate_results.html', time=datetime.now())

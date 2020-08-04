@@ -17,7 +17,8 @@
     border-radius:1.5rem;
 }
 .btnSubmit
-{
+{   
+    text-align:center;
     border:none;
     border-radius:1.5rem;
     padding: 1%;
