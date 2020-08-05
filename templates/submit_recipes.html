@@ -1,0 +1,36 @@
+<html>
+
+<head>
+	<title>Welcome!</title>
+	<link rel="stylesheet" href="static/css/contactus.css?q={{time}}" type=text/css <div class="contact-section">
+        <div class="container">
+            
+</head>
+
+<body>
+        <script>
+        function addAnotherIngredient() {
+            var input = document.createElement("INPUT");
+            input.setAttribute("type", "text");       
+            input.setAttribute("placeholder", "Enter ingredient name, amount and units. Ex: baking soda 1 ounce")    
+            document.body.appendChild(input);
+            }
+        </script>
+    
+	<h1>What recipe would you like to submit?</h1>
+	<form method="post" action="/submit_recipes_results">
+        <input type="text" name="name" placeholder="First and last name"/>
+		<input type="text" name="email" placeholder="Email address"/>
+		<input type="text" name="title" placeholder="What is the name of your recipe?"/>
+		<input type="text" name="diet" placeholder="Is this recipe suited specifically for a diet?"/>
+        <input type="text" name="ingredient" placeholder="Ingredient name"/>
+		<input type="number" name="amount" placeholder="Amount of this ingredient- only the number"/>
+	    <input type="text" name="unit" placeholder="The unit of this ingredient- no shortened versions"/>
+        <button onclick="addAnotherIngredient()" button type="button">Add Another Ingredient</button>
+        <input type="url" name="url" placeholder="Enter a link where the instructions are found!"/>
+        <input type="url" name="image" placeholder="Enter a link to the image of your recipe item!"/>
+		<input type="submit" value="Submit"/>
+    </form>
+</body>
+
+</html>

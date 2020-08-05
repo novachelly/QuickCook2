@@ -111,11 +111,11 @@ def donate_results():
     return render_template('donate_results.html', time=datetime.now())
 
 
-@app.route('/register_try')
-def register_try():
-    return render_template('register_try.html', time=datetime.now())
+@app.route('/submit_recipes', methods=['GET', 'POST'])
+def submit_recipes():
+    return render_template('submit_recipes.html', time=datetime.now())
 
 
-@app.route('/register_results_try')
-def register_results_try():
-    return render_template('register_results_try.html', time=datetime.now())
+@app.route('/submit_recipes_results', methods=['GET', 'POST'])
+def submit_recipes_results():
+    return render_template('submit_recipes_results.html', time=datetime.now())
