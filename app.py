@@ -5,9 +5,15 @@ import os
 import requests
 from model import getRecipeFromIngredients
 from model import getRecipeInfo
+# from flask_pymongo import PyMongo
+
 
 app = Flask(__name__)
 app.config['SPOON_KEY'] = os.getenv('SPOON_KEY')
+# app.config['MONGO_DBNAME'] = 'QuickCook'
+# app.cofig['MONGO_URI'] = ''
+
+# mongo = PyMongo(app)
 
 
 @app.route('/')
@@ -103,3 +109,13 @@ def register_results():
 @app.route('/donate_results')
 def donate_results():
     return render_template('donate_results.html', time=datetime.now())
+
+
+@app.route('/register_try')
+def register_try():
+    return render_template('register_try.html', time=datetime.now())
+
+
+@app.route('/register_results_try')
+def register_results_try():
+    return render_template('register_results_try.html', time=datetime.now())
